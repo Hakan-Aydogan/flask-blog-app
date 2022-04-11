@@ -1,0 +1,16 @@
+{% extends "layout.html " %} {% block body %}
+<div class="jumbotron text-center">
+  <h3>ANA SAYFA</h3>
+  <p>Ana sayfaya Hoş geldiniz... Bu bir Flask uygulamasıdır</p>
+</div>
+{% if answer=="Evet" %}
+<p>EVET</p>
+{% else %}
+<p>Hayır</p>
+{% endif %}
+<ul>
+  {% for article in articles %}
+  <li>{{ article.title}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
